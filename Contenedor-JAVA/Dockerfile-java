@@ -1,0 +1,15 @@
+#Usamos la imagen openjdk de java
+FROM openjdk:20-jdk-slim
+
+# Copiamos el código Java
+COPY . /app
+
+#Nos movemos el directorio app
+WORKDIR /app
+
+# Compilamos la aplicación
+RUN javac Main.java
+
+# Ejecutamos la aplicación
+CMD ["java", "Main"]
+

@@ -1,0 +1,12 @@
+#Usamos la imagen MySQL v8.0
+FROM mysql:8.0
+
+# Variables de entorno para configurar MySQL
+ENV MYSQL_ROOT_PASSWORD=123456
+ENV MYSQL_DATABASE=bbdd
+ENV MYSQL_USER=coelhooriginal
+ENV MYSQL_PASSWORD=123456
+
+# Exponemos el puerto 3306 del MySQL
+EXPOSE 3306
+

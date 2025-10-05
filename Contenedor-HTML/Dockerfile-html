@@ -1,0 +1,9 @@
+# Usamos la imagen base de nginx version reducida latest
+FROM nginx:alpine
+
+# Copiamos los archivos HTML al directorio de nginx
+COPY . /html/usr/share/nginx/html
+
+# Exponemos el puerto 80
+EXPOSE 80
+

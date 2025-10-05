@@ -1,0 +1,16 @@
+#Usamos la imagen python v3.12
+FROM python:3.12-slim
+
+#Copiamos el código 
+COPY . /app
+
+# Nos movemos al directorio
+WORKDIR /app
+
+# Instalamos dependencias (si hay requirements.txt, en este ejemplo no necesitamos librerías extras de python)
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Ejecutamos el script Python con el comando python y la aplicación app.py 
+CMD ["python", "app.py"]
+
